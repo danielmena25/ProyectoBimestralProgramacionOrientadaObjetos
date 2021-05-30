@@ -1,1 +1,1 @@
-# ProyectoBimestralProgramacionOrientadaObjetos
+# UNIVERSIDAD TECNICA PARTICULAR DE LOJA 
