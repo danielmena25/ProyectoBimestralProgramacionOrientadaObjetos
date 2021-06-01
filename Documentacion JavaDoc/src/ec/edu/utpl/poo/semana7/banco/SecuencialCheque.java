@@ -6,8 +6,8 @@
 package ec.edu.utpl.poo.semana7.banco;
 
 /**
- *
- * @author adria
+ * @author Carlos Daniel Escudero Mena
+ * @author Adrián Alessandro Rivera Cueva
  */
 public class SecuencialCheque {
     private String inicio;
