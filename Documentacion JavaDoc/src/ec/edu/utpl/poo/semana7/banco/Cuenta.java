@@ -6,8 +6,8 @@
 package ec.edu.utpl.poo.semana7.banco;
 import java.time.LocalDate;
 /**
- *
- * @author adria
+ * @author Adrián Alessandro Rivera Cueva
+ * @author Carlos Daniel Escudero Mena 
  */
 public class Cuenta {
     private double saldo;
@@ -15,44 +15,66 @@ public class Cuenta {
     private LocalDate fechaApertura;
 
     /**
-     * Este constructor inicializa las variables que dan vida al objeto creado
+     * Este constructor inicializa las variables que dan vida al objeto creado.
      * @param numero Se almacena el número de cuenta tal cual fue mandado.
-     * @param saldo Se verifica el saldo con el metodo setSaldo y se lo almacena
+     * @param saldo Se verifica el saldo con el metodo setSaldo y se lo almacena.
      */
     public Cuenta(String numero, double saldo) {
         setSaldo(saldo);
         this.numero = numero;
         fechaApertura = LocalDate.now();
     }
-
+    
+    /**
+     * Con este metodo get se devuelve el saldo que tiene la cuenta.
+     * @return Devuelve el valor de saldo.
+     */
     public double getSaldo() {
         return saldo;
     }
-
+    /**
+     * Con este metodo get se devuelve el numero de cuenta.
+     * @return Devuelve el valor de numero.
+     */
     public String getNumero() {
         return numero;
     }
-
-    public void setSaldo(double saldo) {
+    /**
+     * Con este metodo se cambia el valor de saldo.
+     * @param saldo Con este parametro mandas el valor que quieres asignar a saldo.
+     * @throws IllegalArgumentException Se lanza cuando el saldo es negativo.
+     */
+    public void setSaldo(double saldo) throws IllegalArgumentException{
         if (!validarSaldoNoNegativo(saldo)) 
             this.saldo = saldo;
         else
             throw new IllegalArgumentException("Saldo Negativo");
     }
-
+    /**
+     * Con este metodo se cambia el número de cuenta.
+     * @param numero Con este parametro se manda el valor a asignar a numero.
+     */
     public void setNumero(String numero) {
         this.numero = numero;
     }
-    
-    public void depositar(double monto){
+    /**
+     * Con este metodo se puede depositar en la cuenta.
+     * @param monto Con este parametro se ingresa el valor a depositar.
+     * @throws IllegalArgumentException Se lanza cuando el monto ingresado es negativo.
+     */
+    public void depositar(double monto) throws IllegalArgumentException{
         if(monto > 0)
             saldo += monto;
         else
             throw new IllegalArgumentException("Monto negativo");
     }
-    
-    private boolean validarSaldoNoNegativo(double monto){
-        monto =- saldo;
-        return monto < 0;
+    /**
+     * Con este metodo se valida si el saldo ingresado es negativo.
+     * @param saldo Con este parametro se manda el valor a verificar si es positivo.
+     * @return Devuelve true si el saldo es negativo o false si no es negetivo.
+     */
+    private boolean validarSaldoNoNegativo(double saldo){
+        saldo =- this.saldo;
+        return saldo < 0;
     }
 }
