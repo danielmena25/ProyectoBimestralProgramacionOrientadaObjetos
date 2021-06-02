@@ -6,6 +6,9 @@
 package ec.edu.utpl.poo.semana7.banco;
 
 /**
+ * Esta Clase Ahorros va a representar una cuenta de ahorros bancaria personal.
+ * En esta clase solo estan representados los atributos y metodos que mas utilizan 
+ * la mayoria de bancos del mundo.
  * @author Carlos Daniel Escudero Mena
  * @author Adrián Alessandro Rivera Cueva
  */
@@ -48,7 +51,8 @@ public class Ahorro extends Cuenta{
         return interesAnual;
     }
     /**
-     * Con este metodo se verifica que el monto sea positivo o valido.
+     * Con este metodo se verifica que el monto sea positivo o valido, este metodo 
+     * solo se utiliza en el metodo retirar.
      * @param monto Se ingresa el monto a validar.
      * @return Devuelve true si el monto es valido y false si el monto no es valido.
      */

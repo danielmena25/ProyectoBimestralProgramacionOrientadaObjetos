@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class Cuenta {
     private double saldo;
     protected String numero;
-    private LocalDate fechaApertura;
+    private final LocalDate fechaApertura;
 
     /**
      * Este constructor inicializa las variables que dan vida al objeto creado.
@@ -40,11 +40,19 @@ public class Cuenta {
         return numero;
     }
     /**
+     * Con este metodo devuelve la fecha en la que fue creada la cuenta.
+     * @return Se devuelve la fecha de apertura de la cuenta, el tipo de dato que
+     * se devuelve es de tipo LocalDate.
+     */
+    public LocalDate getFechaApertura() {
+        return fechaApertura;
+    }
+    /**
      * Con este metodo se cambia el valor de saldo.
      * @param saldo Con este parametro mandas el valor que quieres asignar a saldo.
      * @throws IllegalArgumentException Se lanza cuando el saldo es negativo.
      */
-    public void setSaldo(double saldo) throws IllegalArgumentException{
+    public final void setSaldo(double saldo) throws IllegalArgumentException{
         if (!validarSaldoNoNegativo(saldo)) 
             this.saldo = saldo;
         else
@@ -69,12 +77,11 @@ public class Cuenta {
             throw new IllegalArgumentException("Monto negativo");
     }
     /**
-     * Con este metodo se valida si el saldo ingresado es negativo.
+     * Con este metodo se valida si el valor que se pretende cambiar a saldo es negativo.
      * @param saldo Con este parametro se manda el valor a verificar si es positivo.
      * @return Devuelve true si el saldo es negativo o false si no es negetivo.
      */
     private boolean validarSaldoNoNegativo(double saldo){
-        saldo =- this.saldo;
         return saldo < 0;
     }
 }
