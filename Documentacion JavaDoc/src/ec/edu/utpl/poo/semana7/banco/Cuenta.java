@@ -6,8 +6,12 @@
 package ec.edu.utpl.poo.semana7.banco;
 import java.time.LocalDate;
 /**
+ * Esta clase Cuenta representa las caracteristicas generales de una cuenta bancaria.
+ * En esta clase solo se representan las caracteristicas mas generales de las cuentas
+ * bancarias para que a partir de ella se creen los distintos tipos de cuenta.
  * @author Adrián Alessandro Rivera Cueva
- * @author Carlos Daniel Escudero Mena 
+ * @author Carlos Daniel Escudero Mena
+ * @version 1.0
  */
 public class Cuenta {
     private double saldo;

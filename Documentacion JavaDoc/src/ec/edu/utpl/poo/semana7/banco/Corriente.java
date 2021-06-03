@@ -6,8 +6,12 @@
 package ec.edu.utpl.poo.semana7.banco;
 
 /**
+ * Esta Clase Corriente va a representar una cuenta corriente bancaria.
+ * En esta clase solo estan representados los atributos y metodos que mas utilizan 
+ * la mayoria de bancos del mundo.
  * @author Carlos Daniel Escudero Mena
  * @author Adrián Alessandro Rivera Cueva
+ * @version 1.0
  */
 public class Corriente extends Cuenta{
     private int nroMaxCheques;
@@ -28,7 +32,7 @@ public class Corriente extends Cuenta{
         return nroMaxCheques;
     }
     /**
-     * Con este metodo get se obtiene la secuencia numerica del cheque. 
+     * Con este metodo get se obtiene las secuencias númericas de los cheques. 
      * @return Devuelve la secuencia numerica del cheque.
      */
     public SecuencialCheque getSecuenciaCh() {

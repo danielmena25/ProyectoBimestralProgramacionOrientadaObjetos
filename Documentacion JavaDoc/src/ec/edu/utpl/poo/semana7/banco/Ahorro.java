@@ -11,6 +11,7 @@ package ec.edu.utpl.poo.semana7.banco;
  * la mayoria de bancos del mundo.
  * @author Carlos Daniel Escudero Mena
  * @author Adrián Alessandro Rivera Cueva
+ * @version 1.0
  */
 public class Ahorro extends Cuenta{
     private double interesAnual;
