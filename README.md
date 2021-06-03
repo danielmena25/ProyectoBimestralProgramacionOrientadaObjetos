@@ -4,7 +4,7 @@
 ## INVESTIGACION SOBRE JAVADOC
 ###### Javadoc es una utilidad de Oracle para la generación de documentación de APIs en formato HTML a partir de código fuente Java. Javadoc es el estándar de la industria para documentar clases de Java. La mayoría de los IDEs los generan automáticamente.
 
-## Nota:
+## NOTA:
 ###### Los HTML que contiene la documentacion del proyecto se encuentran dentro de esta ruta: /Documentacion JavaDoc/dist/javadoc 
 
 ## CODIGO:
